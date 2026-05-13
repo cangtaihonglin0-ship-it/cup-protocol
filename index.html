@@ -2,14 +2,15 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project ÆTHER | Official Repository</title>
     <style>
         :root {
-            /* 配色は清潔感のある白と濃い青のみに絞り込む */
-            --bg-main: #ffffff;
-            --header-blue: #007bb5; /* 視認性の高い、はっきりした青 */
+            --header-blue: #007bb5;
             --accent-blue: #005662;
+            --bg-main: #ffffff;
             --text-color: #333333;
+            --border-color: #e0e0e0;
         }
         
         body { 
@@ -20,53 +21,70 @@
             line-height: 1.8; 
         }
 
-        /* ヘッダー：グラデーションを廃止し、シンプルに白文字を際立たせる */
+        /* シンプルな高コントラストヘッダー */
         .site-header {
             background-color: var(--header-blue);
-            color: white; /* 文字色は白 */
+            color: white;
             padding: 100px 20px;
             text-align: center;
         }
 
         .site-header h1 {
-            font-size: 4rem;
+            font-size: clamp(2.5rem, 8vw, 4rem);
             margin: 0;
             letter-spacing: 0.5rem;
-            font-weight: 700; /* 太すぎず、力強く */
+            font-weight: 700;
         }
 
         .site-header p {
             font-size: 1.2rem;
-            margin-top: 10px;
+            margin-top: 15px;
             opacity: 0.9;
+            font-weight: 300;
         }
 
         nav { 
-            background: rgba(255, 255, 255, 0.95); 
+            background: rgba(255, 255, 255, 0.98); 
             padding: 15px; 
             text-align: center; 
             position: sticky; 
             top: 0; 
-            border-bottom: 1px solid #e0e0e0; 
+            border-bottom: 1px solid var(--border-color); 
             z-index: 100;
         }
         
-        nav a { margin: 0 25px; text-decoration: none; color: var(--header-blue); font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
+        nav a { 
+            margin: 0 20px; 
+            text-decoration: none; 
+            color: var(--header-blue); 
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: var(--accent-blue); text-decoration: underline; }
 
         .container { 
             max-width: 800px; 
             margin: 60px auto; 
-            padding: 20px; 
+            padding: 0 25px; 
         }
 
-        h1 { color: var(--header-blue); border-bottom: 2px solid var(--header-blue); padding-bottom: 10px; }
-        h3 { color: var(--accent-blue); margin-top: 40px; }
+        h1 { color: var(--header-blue); border-bottom: 2px solid var(--header-blue); padding-bottom: 10px; margin-top: 40px; }
+        h3 { color: var(--accent-blue); margin-top: 40px; border-left: 5px solid var(--header-blue); padding-left: 15px; }
 
+        .lead-text { font-size: 1.15rem; color: #444; }
+        
         ul { padding-left: 20px; }
         li { margin-bottom: 15px; }
+        li strong { color: var(--header-blue); }
 
-        .footer { text-align: center; padding: 80px 20px; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; }
+        .footer { 
+            text-align: center; 
+            padding: 80px 20px; 
+            color: #999; 
+            font-size: 0.85rem; 
+            border-top: 1px solid #eee;
+            margin-top: 100px;
+        }
     </style>
 </head>
 <body>
@@ -83,7 +101,7 @@
 
 <div class="container">
     <h1>1000年先の「凪」を設計する</h1>
-    <p>Project ÆTHERは、生存の恐怖、資源の奪い合い、そしてあらゆる不条理から人類を解放し、誰もが個人の才能をどこまでも伸ばすことができるようにするための文明更新計画です。</p>
+    <p class="lead-text">Project ÆTHER（プロジェクト・エーテル）は、生存の恐怖、資源の奪い合い、そしてあらゆる不条理から人類を解放し、誰もが個人の才能をどこまでも伸ばすことができるようにするための文明更新計画です。</p>
     
     <h3>私たちが目指す世界</h3>
     <ul>
@@ -92,7 +110,8 @@
         <li><strong>破壊さえも愛でる社会：</strong> 人間の本能（破壊衝動）を否定せず、新しい世界を作るためのエネルギーへと変換します。</li>
     </ul>
     
-    <p>これは「完成」を目指すプロジェクトではありません。1000年かけて、ゆっくりと、しかし確実に人類のOSを書き換えていく試みです。</p>
+    <h3>プロジェクトの性質</h3>
+    <p>これは一時の流行や「完成」を目指すものではありません。1000年かけて、ゆっくりと、しかし確実に人類社会のOSを書き換えていく、終わりなき試みです。</p>
 </div>
 
 <div class="footer">&copy; 2026 Project ÆTHER | Architect Aniota Saburo</div>
