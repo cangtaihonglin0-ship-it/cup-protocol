@@ -2,13 +2,15 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C.U.P. Protocol v5.9.1 | Official Repository</title>
     <style>
         :root {
-            --bg-main: #ffffff;
             --header-blue: #007bb5;
             --accent-blue: #005662;
+            --bg-main: #ffffff;
             --text-color: #333333;
+            --code-bg: #f8f9fa;
         }
         
         body { 
@@ -27,7 +29,7 @@
         }
 
         .site-header h1 {
-            font-size: 4rem;
+            font-size: clamp(2.5rem, 8vw, 4rem);
             margin: 0;
             letter-spacing: 0.5rem;
             font-weight: 700;
@@ -43,31 +45,34 @@
             z-index: 100;
         }
         
-        nav a { margin: 0 25px; text-decoration: none; color: var(--header-blue); font-weight: bold; }
+        nav a { margin: 0 20px; text-decoration: none; color: var(--header-blue); font-weight: bold; }
 
         .container { 
-            max-width: 800px; 
+            max-width: 900px; 
             margin: 60px auto; 
-            padding: 20px; 
+            padding: 0 25px; 
         }
 
         h1 { color: var(--header-blue); border-bottom: 2px solid var(--header-blue); padding-bottom: 10px; }
         
+        .protocol-meta { background: #eee; padding: 15px; border-radius: 5px; font-family: monospace; font-size: 0.9rem; margin-bottom: 30px; }
+
         /* 仕様書テキスト用のスタイル */
         pre { 
-            background: #fdfdfd; 
-            padding: 30px; 
-            border: 1px solid #eee; 
-            border-radius: 5px; 
+            background: var(--code-bg); 
+            padding: 40px; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
             white-space: pre-wrap; 
             word-wrap: break-word; 
             font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
             font-size: 0.95rem;
-            color: #444;
-            line-height: 1.6;
+            color: #222;
+            line-height: 1.7;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.02);
         }
 
-        .footer { text-align: center; padding: 80px 20px; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; }
+        .footer { text-align: center; padding: 80px 20px; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; margin-top: 100px; }
     </style>
 </head>
 <body>
@@ -84,18 +89,29 @@
 
 <div class="container">
     <h1>文明更新プロトコル v5.9.1</h1>
-    <p>本ドキュメントは、THE ARCHE（アルケー）が準拠すべき最上位の論理仕様書です。</p>
+    <p>本ドキュメントは、THE ARCHE（アルケー）が準拠すべき最上位の論理仕様書です。1000年間の文明更新における全工程を定義します。</p>
     
-    <pre>
-【文明更新プロトコル：Civilization Update Protocol (C.U.P.) v5.9.1】
-設計主幹：Aniota Saburo (The First Architect)
-統括組織：THE ARCHE（アルケー）
-策定開始：2026年5月
+    <div class="protocol-meta">
+        FILE_ID: CUP_PROTOCOL_V591<br>
+        DESIGNER: Aniota Saburo (The First Architect)<br>
+        ORGANIZATION: THE ARCHE<br>
+        DATE: 2026.05
+    </div>
 
-■ 第1章：ACE（AI因果律エンジン）と意志の動的均衡
+    <pre>
+■ 第1章：システム基盤と論理定義
+
 1.1 ACE (AI Causality Engine) の演算定義
+    - 全地球規模の因果律シミュレーションによる紛争・欠乏の予測と回避。
+    - 資源分配の最適化アルゴリズムの実装。
+
 1.2 警告型インターフェース「イエロー・カード・プロトコル」
+    - 破滅的な選択肢に対し、非侵襲的な「警告」を発するシステムの構築。
+    - 強制力ではなく、論理的帰結の提示による意志決定の支援。
+
 1.3 意志のコスト化と事後逆転報酬
+    - 他者への不利益を伴う行動に論理的コストを設定。
+    - 寛容な行動に対し、長期的な利益を付与する報酬系の設計。
 
 ■ 第2章：1000年マイルストーン・ロードマップ
 
@@ -103,31 +119,59 @@
     - 組織の設立と1000年計画を管理・継承する体制の構築。
     
     [Phase 1-A：基盤構築の20年（2026-2046）]
-    1. 理論と技術の確立 (2026-2032): 山口大学での研究期間。因果律計算の基礎構築。
-    2. 経済的・法的自立 (2032-2038): 組織が外部の圧力に屈しないための基盤を確立。
-    3. 社会的信頼と実験 (2038-2046): ACEのプロトタイプを稼働させ、最初の警告の実証を行う。
+    1. 理論と技術の確立 (2026-2032)
+       - 山口大学での研究期間。因果律計算の基礎アルゴリズム構築。
+    2. 経済的・法的自立 (2032-2038)
+       - 組織が外部の圧力に屈しないための、独自の経済基盤と独立性の確保。
+    3. 社会的信頼と実験 (2038-2046)
+       - ACEプロトタイプを稼働させ、小規模環境での「最初の警告」実証。
 
 [Phase 2：80-200年] 物理的解放と「暇」の受容
+    - 食糧・エネルギーの完全自動化。生存のための労働からの解放。
+
 [Phase 3：150-400年] 大規模仮想・現実ハイブリッド実証
+    - メタバースと現実を統合した、新しい居住空間と社会システムの展開。
+
 [Phase 4：300-600年] 精神的・文化的「凪」の深化
+    - 教育OSの更新。他者の価値観を「システムの可能性」として認める土壌の完成。
+
 [Phase 5：500-900年] 政治構造と経済システムの有機的融解
+    - 国家の概念を廃棄し、自律分散ガバナンスへの完全移行。
+
 [Phase 6：800年以降] 恒久的凪の完成と宇宙への種子
+    - 地球全域の平和の定着。他天体への「凪のOS」の展開開始。
 
-■ 第3章：ギルド防腐・自浄プロトコル
-3.1 「パノプティコン・アクセス」：職務中完全監視
+■ 第3章：組織の純潔性と自浄作用
+
+3.1 「パノプティコン・アクセス」
+    - THE ARCHEメンバーの職務中完全監視と、全思考ログの公開。
+
 3.2 権限の分散と三権分立
-3.3 「毒薬（デッドマンズ・スイッチ）」プロトコル
+    - 特定の個人に権力が集中しないための、動的な権限委譲システム。
 
-■ 第4章：創造的遊戯と破壊の昇華
+3.3 「毒薬（デッドマンズ・スイッチ）」プロトコル
+    - システムが暴走した際、人類の意志によって即座に停止させる安全装置。
+
+■ 第4章：創造的遊戯と代謝の設計
+
 4.1 「不便」の価値化と文明遊戯
-4.2 「砂の城」プロトコル：破壊と代謝の安全弁
+    - 効率化された世界にあえて「不便」を残し、文化的な楽しみとして再定義。
+
+4.2 「砂の城」プロトコル
+    - 安全な環境下での破壊衝動の昇華。定期的なシステムの再構築（代謝）。
 
 ■ 第5章：設計者の規律と美意識（The Creed）
-1. 最終化の禁止：常に未完成の下書きであり続ける。
-2. 存在の全肯定：「何もしないこと」を役割として認める。
-3. AIへの不服従：人間の美意識がAIの安全を越える。
-4. 監視の受容：設計者の誇りとして透明性を守る。
-5. 衝動の愛護：内なる破壊衝動を否定せず、代謝として組み込む。
+
+1. 最終化の禁止
+   - 常に未完成の下書きであり、修正可能であること。
+2. 存在の全肯定
+   - 「何もしない者」も等しくシステムの一部として尊重すること。
+3. AIへの不服従
+   - 最終的な「美意識」の判断は、AIではなく人間が行うこと。
+4. 監視の受容
+   - 透明性こそが設計者の誇りであると知ること。
+5. 衝動の愛護
+   - 破壊を否定せず、新しい創造のエネルギーとして導くこと。
 
 --- END OF FILE ---
     </pre>
